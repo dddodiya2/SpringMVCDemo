@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MyFirstSpringController {
@@ -26,13 +27,27 @@ public class MyFirstSpringController {
 		return "myForm";
 	}
 
-	@RequestMapping("/submitForm")
-	public String submitForm(HttpServletRequest request, Model model) {
+	@RequestMapping("/submitForm1")
+	public String submitForm1() {
+		return "displayForm1";
+	}
+
+	@RequestMapping("/submitForm2")
+	public String submitForm2(HttpServletRequest request, Model model) {
 		String theName = request.getParameter("userName");
-		
+
 		model.addAttribute("mygivenName", theName);
-		
-		return "displayForm";
+
+		return "displayForm2";
+	}
+
+	@RequestMapping("/submitForm3")
+	public String submitForm3(@RequestParam("userName") String theName, Model model) {
+		// String theName = request.getParameter("userName");
+
+		model.addAttribute("mygivenName", theName);
+
+		return "displayForm3";
 	}
 
 }

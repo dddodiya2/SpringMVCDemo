@@ -8,7 +8,17 @@
 </head>
 <body>
 		
-	<form action="submitForm" method="get" >
+	<form action="submitForm1" method="get" >
+		<input type="text" name="userName" placeholder="What's ur name">
+		<input type="submit" >
+	</form>
+	
+	<form action="submitForm2" method="get" >
+		<input type="text" name="userName" placeholder="What's ur name">
+		<input type="submit" >
+	</form>
+	
+	<form action="submitForm3" method="get" >
 		<input type="text" name="userName" placeholder="What's ur name">
 		<input type="submit" >
 	</form>		

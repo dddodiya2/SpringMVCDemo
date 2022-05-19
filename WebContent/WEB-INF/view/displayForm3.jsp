@@ -7,6 +7,7 @@
 <title>You are into the Spring MVC world !!</title>
 </head>
 <body>
+	<h2>using @RequestParam annotations in controller and using the model</h2>
 	<h2> ${mygivenName}, Hope you are doing well !!!</h2>
 </body>
 </html>
